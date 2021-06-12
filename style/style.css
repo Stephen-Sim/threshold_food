@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+ *{
+ 	margin:0;
+ 	padding: 0;
+ 	box-sizing: border-box;
+ 	font-family: 'Overpass', sans-serif;
+ }
+ #logoHere{
+	float:left;
+	width:110px;
+	padding-top: 10px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	min-height: 100px;
+	min-width: 100px;
+}
+
+.Head{
+	background-color: #808080;
+	font-size: 40px;
+	letter-spacing: 5px;
+	font-family:'Roboto', sans-serif;
+	width:100%;
+	height: 110px;
+	padding-top:30px;
+	padding-left:150px;
+	color: white;
+}
+
+	
+
+body{
+	background-color: #ece5dd;
+	margin:0;
+}
+footer{
+	background-color: #808080;
+	color: #fffdfa;
+	padding: 0;
+	margin:0;
+}
+/*for registration form design*/
+
+
+ .wrapper{
+ 	padding-bottom:50px; /*height from div with footer*/
+ 	display:flex;
+ 	justify-content: center;
+ 	align-items: center; /*make it equal between up and down height*/
+ 	padding-top: 30px;/*distance on top of the website with .wrapper*/
+ }
+ .registration_form{
+ 	background: #c0c0c0; /*grey*/
+ 	padding:25px;
+ 	border-radius:10px;
+ 	width:500px; /*width of the box*/
+ }
+.title{
+ 	text-align: center;
+ 	font-size: 35px;
+ 	text-transform:uppercase;
+ 	color: black;
+ 	letter-spacing: 4px;
+ 	font-weight: 200;
+ 	font-family: 'Staatliches';
+ }
+
+ .form_wrap{
+ 	margin-top: 10px; /*distance between title and labels*/
+ }
+
+ .form_wrap .input_wrap{
+ 	margin-bottom: 	15px;
+ }
+ .form_wrap .input_wrap:last-child(){
+ 	margin-bottom:0;
+ }
+ .form_wrap .input_wrap label{ /*distance between label and input*/
+ 	display: block;
+ 	margin-bottom: 2px;
+ 	color: black;
+ 	font-size: 15px;
+ }
+ .form_wrap .input_group{
+ 	display: block;
+ 	justify-content: center;
+ }
+input{
+	width:100%;
+	border-radius: 3px;
+	border: 1px solid ;
+	height: 30px;
+	padding: 10px;
+	outline: none;
+	font-size: 17px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: 0;
+}
+input:focus{
+	border-color:#807e7d; 
+	border-width: 3px;
+}
+input[type="submit"]{
+	width:40%;
+	justify-content: center;
+	font-size: 15px;
+	text-transform: uppercase;
+	background-color: white;
+	padding-top: 5px;
+	padding-bottom:10px;
+}
+iframe{
+	width:200px;
+	height: 200px;
+}
+#marginFooter{
+	padding-top: 10px;
+	padding-left:10px;
+}
+h5{
+	margin-bottom: 4px;
+	font-weight:lighter;
+}
+

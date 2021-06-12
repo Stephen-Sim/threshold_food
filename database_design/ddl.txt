@@ -19,7 +19,7 @@ CREATE TABLE product
 	Product_Quantity 	INT(11) 		NOT NULL
 );
 
-CREATE TABLE custormer
+CREATE TABLE customer
 (
 	Customer_Id 		INT(3) 			NOT NULL 	PRIMARY KEY 	AUTO_INCREMENT,
 	Customer_Name 		VARCHAR(255)	NOT NULL,
