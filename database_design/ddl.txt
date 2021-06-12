@@ -1,0 +1,39 @@
+DROP DATABASE IF EXISTS threshold_food;
+	CREATE DATABASE IF NOT EXISTS threshold_food;
+    
+USE threshold_food;
+
+CREATE TABLE administrator
+(
+	Admin_Id 		INT(3) 		 	NOT NULL 	PRIMARY KEY,
+	Admin_Name 		VARCHAR(255) 	NOT NULL,
+	Admin_Password 	VARCHAR(255) 	NOT NULL
+);	
+
+CREATE TABLE product
+(
+	Product_No 			INT(3) 			NOT NULL 	PRIMARY KEY 	AUTO_INCREMENT,
+	Product_Name 		VARCHAR(255) 	NOT NULL,
+	Product_Price 		DECIMAL(64,2) 	NOT NULL,
+	Product_Category 	VARCHAR(255) 	NOT NULL,
+	Product_Quantity 	INT(11) 		NOT NULL
+);
+
+CREATE TABLE custormer
+(
+	Customer_Id 		INT(3) 			NOT NULL 	PRIMARY KEY 	AUTO_INCREMENT,
+	Customer_Name 		VARCHAR(255)	NOT NULL,
+	Customer_Password 	VARCHAR(255)	NOT NULL,
+	Customer_Phone 		INT(11) 		NOT NULL,
+	Customer_Email 		VARCHAR(255) 	NOT NULL
+);
+
+CREATE TABLE bill
+(
+	Customer_Id 	INT(3) 			REFERENCES customer(Customer_Id),
+	Product_No		INT(3) 			REFERENCES product(Product_No),
+	Buy_Quantity 	INT 			NOT NULL,
+	Total_Price 	DECIMAL(64,2)	NOT NULL
+);
+
+INSERT INTO administrator VALUES(001, "admin_allie", "allieChiang123"), (002, "admin_micole", "micoleSiow123");
