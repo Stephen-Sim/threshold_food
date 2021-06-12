@@ -7,6 +7,12 @@
  	box-sizing: border-box;
  	font-family: 'Overpass', sans-serif;
  }
+
+ body{
+ 	background-image: url('../image/backgroundPic.png'); 
+ 	background-size: 1600px 800px;
+ }
+
  #logoHere{
 	float:left;
 	width:110px;
@@ -16,6 +22,12 @@
 	padding-right: 10px;
 	min-height: 100px;
 	min-width: 100px;
+}
+.logoHere2{
+	width:150px;
+	min-height: 100px;
+	min-width: 100px;
+	padding-bottom: 20px;
 }
 
 .Head{
@@ -28,14 +40,26 @@
 	padding-top:30px;
 	padding-left:150px;
 	color: white;
-}
-
-	
-
-body{
-	background-color: #ece5dd;
 	margin:0;
 }
+
+.Head2{
+	background-color: #808080;
+	width:100%;	
+	padding-top:30px;
+	padding-left:180px;
+	margin:0;
+}
+
+
+
+button{
+	background-color: white;
+	border-radius: 3px;
+	margin-left:10px;
+	color: salmon;
+}
+
 footer{
 	background-color: #808080;
 	color: #fffdfa;
@@ -110,8 +134,13 @@ input[type="submit"]{
 	font-size: 15px;
 	text-transform: uppercase;
 	background-color: white;
-	padding-top: 5px;
-	padding-bottom:10px;
+	padding-top: 6.5px;
+	padding-bottom:28px;
+	background-color: #c0c0c0;
+}
+input[type="submit"]:hover{
+	background-color: black;
+	color: white;
 }
 iframe{
 	width:200px;

@@ -3,6 +3,11 @@
 
 	session_start();
 
+	if(isset($_POST['login']))
+	{
+		header("location: ../index.html");
+	}
+
 	define('REQUIRE_ERROR', 'THIS FIELD IS REQUIRED');
 
 	$error = [];
@@ -66,6 +71,11 @@
 		if(!$customer_email)
 		{
 			$error['email'] = REQUIRE_ERROR;
+		}
+
+		if (!filter_var($customer_email, FILTER_VALIDATE_EMAIL)) 
+		{
+  			$error['email'] = "INVALID EMAIL FORMAT";
 		}
 	}
 ?>

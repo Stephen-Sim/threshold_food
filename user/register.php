@@ -12,7 +12,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	
 </head>
-<body>
+<body style="background-color: #ece5dd">
 	<?php if(isset($_SESSION['message'])):?>
 	<div class="alert alert-success" role="alert">
 		<?php
@@ -22,13 +22,14 @@
 	</div>
 	<?php endif;?>
 	<header>
-		<img src="../image/logo_threshold.jpeg" id="logoHere">
+		<img src="../image/logo.png" id="logoHere">
 		<div class=" Head">	
 			<p class="mainTitle">Registration</p>
 		</div>
-		
 	</header>
+	
 	<!--form-->
+
 	<div class="wrapper">
 		<div class="registration_form">
 			<div class="title">
@@ -76,6 +77,7 @@
 						</div>
 
 						<input type="submit" name="create" value="Create my Profile" >
+						<input type="submit" name="login" value="Click to Login" >
 					</div>		
 				</div>
 			</form>
