@@ -34,10 +34,9 @@
 			<div class="title">
 				create an account
 			</div>
-			<form action="./userProcess.php" method="post">
+			<form action="" method="post">
 				<div class="form_wrap">
 					<div class="input_group">
-
 						<div class="input_wrap">
 							<label>Username: </label>
 								<input class="form-control <?php echo isset($error['username']) ? 'is-invalid' : '';?>" type="text" name="username" value="<?php echo $customer_name;?>">
@@ -83,12 +82,18 @@
 		</div>
 	</div>
 
+<?php
+	if($customer_name && $customer_password && $customer_confirm && $customer_phone && $customer_email)
+	{
+		$sql = "INSERT INTO customer (Customer_Name, Customer_Password, Customer_Phone, Customer_Email) VALUES ('$customer_name', '$customer_password', $customer_phone, '$customer_email');";
 
+		$result = mysqli_query($conn, $sql);
 
+		$_SESSION['message'] = "You have successfully registered!";
+		header("location: register.php");
+	}
 
-
-
-
+?>
 	<footer>
 		<div id="marginFooter">
 			<h5>Phone number: 011-22223344</h5>

@@ -25,7 +25,9 @@
 		}
 	}
 
-	if(isset($_POST['create']))
+
+
+	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		$customer_name = storeData($_POST['username']);
 		$customer_password = storeData($_POST['password']);
@@ -64,16 +66,6 @@
 		if(!$customer_email)
 		{
 			$error['email'] = REQUIRE_ERROR;
-		}
-
-		if($customer_name && $customer_password && $customer_confirm && $customer_phone && $customer_email)
-		{
-			$sql = "INSERT INTO customer (Customer_Name, Customer_Password, Customer_Phone, Customer_Email) VALUES ('$customer_name', '$customer_password', $customer_phone, '$customer_email');";
-
-			$result = mysqli_query($conn, $sql);
-
-			$_SESSION['message'] = "You have successfully registered!";
-			header("location: register.php");
 		}
 	}
 ?>
