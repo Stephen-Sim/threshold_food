@@ -1,6 +1,11 @@
 <?php
 	require_once "../server/database.php";
-	require_once "./process.php";	
+	require_once "./process.php";
+
+	if(!isset($_SESSION['id']))
+	{
+		header("location: ../index.php");
+	}
 ?>
 
 </body>
@@ -21,7 +26,7 @@
 	<?php endif;?>
 
 	<a href="./upd_and_add.php">add product</a>
-	<a href="login.php">log out</a>
+	<a href="../server/logoutProcess.php">log out</a>
 
 	<?php 
 		$sql = "SELECT * FROM product;";

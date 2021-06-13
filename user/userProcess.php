@@ -34,48 +34,56 @@
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
-		$customer_name = storeData($_POST['username']);
-		$customer_password = storeData($_POST['password']);
-		$customer_confirm = storeData($_POST['confirm_pass']);
-		$customer_phone = storeData($_POST['phoneNo']);
-		$customer_email = storeData($_POST['email']);
-
-
-		if(!$customer_name)
+		if(isset($_POST['create']))
 		{
-			$error['username'] = REQUIRE_ERROR;
+			$customer_name = storeData($_POST['username']);
+			$customer_password = storeData($_POST['password']);
+			$customer_confirm = storeData($_POST['confirm_pass']);
+			$customer_phone = storeData($_POST['phoneNo']);
+			$customer_email = storeData($_POST['email']);
+
+
+			if(!$customer_name)
+			{
+				$error['username'] = REQUIRE_ERROR;
+			}
+
+			if(!$customer_password)
+			{
+				$error['password'] = REQUIRE_ERROR;
+			}
+
+			if(!$customer_confirm)
+			{
+				$error['confirm_pass'] = REQUIRE_ERROR;
+			}
+
+			if($customer_password && $customer_confirm && ($customer_password != $customer_confirm))
+			{
+				$error['confirm_pass'] = "IT MUST MATCH THE PASSWORD";
+				$customer_password = '';
+				$customer_confirm = '';
+			}
+
+			if(!$customer_phone)
+			{
+				$error['phoneNo'] = REQUIRE_ERROR;
+			}
+
+			if(!$customer_email)
+			{
+				$error['email'] = REQUIRE_ERROR;
+			}
+
+			if (!filter_var($customer_email, FILTER_VALIDATE_EMAIL)) 
+			{
+	  			$error['email'] = "INVALID EMAIL FORMAT";
+			}
 		}
 
-		if(!$customer_password)
+		if(isset($_POST['login']))
 		{
-			$error['password'] = REQUIRE_ERROR;
-		}
-
-		if(!$customer_confirm)
-		{
-			$error['confirm_pass'] = REQUIRE_ERROR;
-		}
-
-		if($customer_password && $customer_confirm && ($customer_password != $customer_confirm))
-		{
-			$error['confirm_pass'] = "IT MUST MATCH THE PASSWORD";
-			$customer_password = '';
-			$customer_confirm = '';
-		}
-
-		if(!$customer_phone)
-		{
-			$error['phoneNo'] = REQUIRE_ERROR;
-		}
-
-		if(!$customer_email)
-		{
-			$error['email'] = REQUIRE_ERROR;
-		}
-
-		if (!filter_var($customer_email, FILTER_VALIDATE_EMAIL)) 
-		{
-  			$error['email'] = "INVALID EMAIL FORMAT";
+			header("location: ../index.php");
 		}
 	}
 ?>

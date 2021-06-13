@@ -17,7 +17,7 @@
 	<div class="alert alert-success" role="alert">
 		<?php
 			echo $_SESSION['message'] . "<br>";
-			unset($_SESSION['message']);
+			session_destroy();
 		?>
 	</div>
 	<?php endif;?>
