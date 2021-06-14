@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS threshold_food;
+	DROP DATABASE IF EXISTS threshold_food;
 	CREATE DATABASE IF NOT EXISTS threshold_food;
     
 USE threshold_food;
@@ -16,7 +16,8 @@ CREATE TABLE product
 	Product_Name 		VARCHAR(255) 	NOT NULL,
 	Product_Price 		DECIMAL(64,2) 	NOT NULL,
 	Product_Category 	VARCHAR(255) 	NOT NULL,
-	Product_Quantity 	INT(11) 		NOT NULL
+	Product_Quantity 	INT(11) 		NOT NULL,
+	Total_Sales			DECIMAL(64,2)	NOT NULL	DEFAULT 0
 );
 
 CREATE TABLE customer
@@ -37,3 +38,16 @@ CREATE TABLE bill
 );
 
 INSERT INTO administrator VALUES(1, "admin_allie", "allieChiang123"), (2, "admin_micole", "micoleSiow123");
+
+INSERT INTO product VALUES
+(1,"LIZIQI Snail Noodle 335g", 5.00, "Instant Noodle", 15, 200), 
+(2, "NISSIN Ramen", 5.00, "Instant Noodle", 15, 200),
+(3,"SAMYANG Ramen", 6.00, "Instant Noodle", 15, 200), 
+(4, "HAIDILAO hotpot", 15.00, "Instant Hotpot", 15, 0),
+(5, "Fried Rice", 15.00, "Instant Rice", 15, 0),
+(6, "KAI XIAO ZAO", 15.00, "Instant Rice", 15, 0),
+(7, "Pringles", 5.00, "Snack", 15, 100),
+(8, "Quest Protein Cookies", 15.00, "Snack", 15, 0),
+(9, "ANMUXI Yogurt", 65.00, "Drink", 15, 350),
+(10, "CHA JI", 10.00, "Drink", 15, 300);
+

@@ -9,7 +9,7 @@
  }
 
  body{
- 	background-image: url('../image/backgroundPic.png'); 
+ 	background-image: url('../image/backgroundPic.png');
  	background-size: 1600px 800px;
  }
 
@@ -23,6 +23,7 @@
 	min-height: 100px;
 	min-width: 100px;
 }
+
 .logoHere2{
 	width:150px;
 	min-height: 100px;
@@ -51,8 +52,6 @@
 	margin:0;
 }
 
-
-
 button{
 	background-color: white;
 	border-radius: 3px;
@@ -66,6 +65,8 @@ footer{
 	padding: 0;
 	margin:0;
 }
+
+
 /*for registration form design*/
 
 
@@ -154,4 +155,3 @@ h5{
 	margin-bottom: 4px;
 	font-weight:lighter;
 }
-

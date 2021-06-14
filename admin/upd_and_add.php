@@ -1,3 +1,5 @@
+<?php require_once "./adminProcess.php";?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,8 +7,7 @@
 	<title>Update and Add Product</title>
 </head>
 <body>
-	<?php require_once "./process.php";?>
-	<form action="process.php" method="post">
+	<form action="adminProcess.php" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="<?php echo $id;?>">
 		<div>
 			<label>Product Name : </label>
@@ -36,6 +37,14 @@
 			<label>Product Quantity : </label>
 			<input type="number" name="quantity" value="<?php echo $product_quantity;?>" placeholder="">
 		</div>
+
+		<?php if ($update == false):?>
+		<div>
+			<label>Upload Image : </label>
+			<input type="file" name="image" value="">
+		</div>
+		<?php endif;?>
+
 		<div>
 			<?php
 			if($update == true):

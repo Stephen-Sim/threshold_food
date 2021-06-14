@@ -89,6 +89,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST")
 				$row = mysqli_fetch_array($result);
 				session_start();
 				$_SESSION['id'] = $row['Admin_Id'];
+				$_SESSION['admin_name'] = $row['Admin_Name'];
 				header("location: ./admin/admin.php");
 			}
 			else

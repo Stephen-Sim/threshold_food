@@ -21,11 +21,9 @@
 		?>
 	</div>
 	<?php endif;?>
+	<!-- header part -->
 	<header>
-		<img src="../image/logo.png" id="logoHere">
-		<div class=" Head">	
-			<p class="mainTitle">Registration</p>
-		</div>
+			<img src="../image/logo.png" style="height: 15%; width: 18%; margin-left: 40%;">
 	</header>
 	
 	<!--form-->
@@ -96,16 +94,6 @@
 	}
 
 ?>
-	<footer>
-		<div id="marginFooter">
-			<h5>Phone number: 011-22223344</h5>
-		<h5>Email address: askadmin@thresholdfood.com</h5>
-		<h5>GPS</h5>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.182694460068!2d101.61919861379069!3d3.0456730546317554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4b2878066b2d%3A0x2e9226b3915214c1!2sThreshold%20of%20Success!5e0!3m2!1sen!2smy!4v1623465212345!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-		<h5>Operating hour: 8am - 5pm</h5>
-		</div>
-		
-		<!--logo here-->
-		</footer>
+
 </body>
 </html>

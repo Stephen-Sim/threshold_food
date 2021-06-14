@@ -23,7 +23,17 @@
 
 		if(mysqli_query($conn, $sql))
 		{
+			$row = mysqli_fetch_array(mysqli_query($conn, "SELECT Product_No From product WHERE Product_Name = '$product_name';"));
+
+			$product_no = $row['Product_No'];
+
+			if(isset($_FILES['image']))
+			{
+				move_uploaded_file($_FILES['image']['tmp_name'], "../image/product_img/$product_no.jpg");
+			}
+
 			$_SESSION['message'] = "Product Successfully Added";
+			$_SESSION['message_type'] = "success";
 			header("location: admin.php");
 		}
 	}
@@ -35,6 +45,7 @@
 		if(mysqli_query($conn, $sql))
 		{
 			$_SESSION['message'] = "Product Successfully Deleted";
+			$_SESSION['message_type'] = "danger";
 			header("location: admin.php");
 		}
 	}
@@ -67,6 +78,7 @@
 		if(mysqli_query($conn, $sql))
 		{
 			$_SESSION['message'] = "Product Successfully Updated";
+			$_SESSION['message_type'] = "success";
 			header("location: admin.php");
 		}
 		else {

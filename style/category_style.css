@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+*{
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+body{
+	background-color: #ece5dd;
+}
+.navbar-expand-lg{ /*outer layer*/
+	background-color: #807e7d; /*grey*/
+}
+.section{ /*whole display*/
+	width:100%;
+	min-height: 100vh;
+	background-color: #ece5dd;;
+}
+.cards{ /*setting for all product card display*/
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin:auto;
+}
+.container-fluid{/*to wrap the text in nav*/
+	font-weight: bold;
+	height: auto;
+	font-size: 20px;
+	padding-top:8px;
+	padding-bottom: 8px;
+	background-color: #ddd0c7; /*nerolac white chocolate*/
+}
+.smallSection{
+	border-radius: 2px;
+	border:0.5px solid #807e7d;;
+	height:75px;
+	background-color: #ddd0c7;	
+}
+.smallSection h2{
+	font-size:45px;
+	padding-bottom: 20px ;
+	font-family: 'Staatliches', cursive;
+	text-transform: uppercase;
+	letter-spacing:3px;
+	text-align: center;
+}
+
+.cards .smallSection{
+	width:100%;
+	margin-top:0px;
+}
+
+.cards .instant_noodles .instant_rice h2:after{
+	content:"";
+	height: 5px;
+	width: 5000px;
+	background-color: #222;
+	border-radius:  1px;
+	display: block;
+	margin: auto;
+}
+.card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 2px 4px rgb(0,0,0,25%);
+	width:400px;
+	text-align: center;
+	margin:25px;
+	height:550px;
+	background-color: whitesmoke;
+	background:#ffffff;
+}
+.image-section{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.image-section img{
+	width:225px;
+	height: auto;
+}
+.description{
+	text-align:center;
+	margin-top: 20px;
+}
+
+.button-group .order{ /*the button*/
+	background-color: #ffff;
+	font-size:14px;
+	padding:8px 8px;
+	border-radius:5px;
+	color: black;
+	text-decoration:none;
+	letter-spacing: 2px;
+	cursor:pointer;
+	border:1px solid black;
+
+}
+.button-group .order:hover{
+	background-color: #ddd0c7;
+	transition: 0.6s ease;
+
+}

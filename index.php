@@ -16,11 +16,8 @@
 
 	<!-- header part -->
 	<header>
-		<div class="Head2">
-		<img src="./image/logo.png" class="logoHere2">
-		</div>
+			<img src="./image/logo.png" style="height: 15%; width: 18%; margin-left: 40%;">
 	</header>
-
 	
 	<!-- login form page -->
 	<div class="wrapper">
