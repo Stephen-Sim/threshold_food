@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+*{
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Overpass', sans-serif;
+}
+
+body{
+	background-color: #ece5dd;
+}
+
+
+header img{
+	width: 20%;
+	height: auto;
+}
+
+nav{
+	position: sticky;
+	background-color: #808080;
+	padding: 0.5% 0%;
+
+}
+
+.nav_name{
+	background-color: #ddd0c7;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 150%;
+	padding: 1%;
+	font-family: Tahoma;
+	font-weight: bold;
+}
+
+/*RECEIPT*/
+
+.table_name{
+	background-color: #808080;
+	padding: 5%;
+	font-size: 200%;
+	font-family: Tahoma;
+	font-weight: bold;
+}
+
+
+/*For table*/
+
+table{
+	width: 100%;
+
+}
+
+
+table, td, th {
+	border-spacing: 5px;
+    border-collapse: separate;
+}
+
+
+th{
+	font-size: 135%;
+}
+
+td, span{
+	font-family: 'Mulish', sans-serif;
+}
+
+.sub{
+	width: 35%;
+}
+
+.styleit{
+	background-color: white;
+	margin: 2% 20%;
+	border-radius: 12px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.set_content{
+	width: 90%;
+	margin-left: 10%;
+}
+
+table span{
+	margin: 0% 13%;
+}
+
+span img{
+	width: 30%;
+}
+
+span img:hover{
+	width: 50%;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*confirm & cancel button*/
+
+.return{
+	color:  black;
+	border: 1px solid black;
+	background-color: white;
+	margin: 2%;
+	padding: 2% 5%;
+	letter-spacing: 2px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 100%;
+	border-radius: 8px;
+	font-family: 'Mulish', sans-serif;
+
+}
+
+.return:hover{
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	font-size: 150%;
+	padding: 1% 4%;
+	background-color: #808080;
+	transition: .5s ease-out;
+	color: white;
+	text-decoration: none;
+	letter-spacing: 0px;
+}
+
+
+/*back to top button*/
+
+.go-up i{
+  	position: fixed;
+	top: 90%;
+	right: 0px;
+	text-align:right;
+	z-index:9999;
+	margin-top:-15px;
+	margin-right: 3%;
+	font-size: 150%;
+	color: black;
+	padding: 1%;
+	border-radius: 12px;
+	background-color: white;
+}
+
+.go-up i:hover{
+	color: white;
+	background-color: #808080;
+	font-size: 180%;
+}
+
+#navstick{
+	display: none;
+}
+
+
+/*for footer*/
+footer{
+	background-color: #805D41;
+	color: #fffdfa;
+	font-size:10px;
+	overflow: hidden;
+}
+
+.footerBox {
+	padding: 10px;
+}
+
+.footerTitle {
+	font-size:20px;
+}
+.location {
+	margin-top: 10px;
+}
+
+/* This is location CSS */
+iframe{
+	width:200px;
+	height: 200px;
+}
+
+.emailBox {
+	background-color:#ddd0c7;
+	color: black;
+	border-radius: 3px;
+}
+
+.emailTableBox {
+	margin-top: 10px;
+}
+
+textarea {
+	width: 200px;
+	height: 100px;
+}
+
+.buttonClass {
+	font-size: 10px !Important;
+	padding: 3px 5px;
+	margin-bottom: 3px;
+}
+
+.copyright {
+	font-size: small;
+	padding-bottom: 10px;
+}
+
+
+/*responsive*/
+/*for 246px and below*/
+@media screen and (max-width: 246px){
+	body{
+		font-size: 30%;
+		width: 100%;
+	}
+
+	.go-up{
+		font-size: 30%;
+	}
+
+	.styleit{
+		margin: 2% 5%;
+	}
+
+	.set_content{
+		width: 100%;
+		margin: 0%;
+	}
+
+	.nav_name, .footerTitle, .copyright{
+		font-size: 95%;
+	}
+
+	.footerBox span, p, label{
+		font-size: 50%;
+	}
+
+}
+
+@media screen and (max-width:  241px){
+	iframe{
+		width: 98%;
+		height: auto;
+	}
+
+	footer input{
+		width: 90%;
+	}
+
+	footer textarea{
+		width: 90%;
+	}
+
+
+}
+
+/*for 247px - 467px*/
+@media screen and (max-width: 467px) and (min-width: 247px){
+	body{
+		font-size: 50%;
+	}
+
+	.styleit{
+		margin: 2% 8%;
+	}
+
+	.set_content{
+		width: 98%;
+	}
+
+	.nav_name, .footerTitle, .copyright{
+		font-size: 110%;
+	}
+
+	.footerBox span, p, label{
+		font-size: 70%;
+	}
+
+	.go-up{
+		font-size: 50%;
+	}
+
+}
+
+/*for 468px - 680px*/
+@media screen and (max-width: 680px) and (min-width: 468px){
+	body{
+		font-size: 70%;
+	}
+
+	.set_content{
+		width: 98%;
+	}
+
+	.nav_name, .footerTitle, .copyright{
+		font-size: 110%;
+	}
+
+	.footerBox span, p, label{
+		font-size: 90%;
+	}
+
+	.go-up{
+		font-size: 70%;
+	}
+
+}

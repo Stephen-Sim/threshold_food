@@ -9,15 +9,17 @@
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<!--bootstrap-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<!-- responsive meta tag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Threshold | Login</title>
 </head>
 <body>
 
 	<!-- header part -->
-	<header>
 			<img src="./image/logo.png" style="height: 15%; width: 18%; margin-left: 40%;">
-	</header>
+
+
 	
 	<!-- login form page -->
 	<div class="wrapper">

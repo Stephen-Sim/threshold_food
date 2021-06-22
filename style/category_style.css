@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 *{
@@ -9,15 +9,27 @@
 body{
 	background-color: #ece5dd;
 }
+/*navigation design*/
 .navbar-expand-lg{ /*outer layer*/
 	background-color: #807e7d; /*grey*/
 }
-.section{ /*whole display*/
+.container-fluid{/* category name - to wrap the text in nav*/
+	font-weight: bold;
+	/*max-width: 611px;*/
+	height: auto;
+	font-size: 20px;
+	padding-top:8px;
+	padding-bottom: 8px;
+	background-color: #ddd0c7; /*nerolac white chocolate*/
+}
+/*whole display*/
+.section{ 
 	width:100%;
 	min-height: 100vh;
 	background-color: #ece5dd;;
 }
-.cards{ /*setting for all product card display*/
+/*setting for all product card display*/
+.cards{ 
 	width:100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -25,14 +37,7 @@ body{
 	align-items: center;
 	margin:auto;
 }
-.container-fluid{/*to wrap the text in nav*/
-	font-weight: bold;
-	height: auto;
-	font-size: 20px;
-	padding-top:8px;
-	padding-bottom: 8px;
-	background-color: #ddd0c7; /*nerolac white chocolate*/
-}
+
 .smallSection{
 	border-radius: 2px;
 	border:0.5px solid #807e7d;;
@@ -53,7 +58,7 @@ body{
 	margin-top:0px;
 }
 
-.cards .instant_noodles .instant_rice h2:after{
+.cards .instant_noodles .instant_rice .drinks .snacks h2:after{
 	content:"";
 	height: 5px;
 	width: 5000px;
@@ -63,19 +68,22 @@ body{
 	margin: auto;
 }
 .card{
+	font-family: 'Mulish', sans-serif;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: left ;
 	flex-direction: column;
 	box-shadow: 0px 2px 4px rgb(0,0,0,25%);
-	width:400px;
+	width:300px;
 	text-align: center;
 	margin:25px;
-	height:550px;
+	height:510px;
 	background-color: whitesmoke;
 	background:#ffffff;
 }
+/*image setting*/
 .image-section{
+	padding-top: 5px;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -83,15 +91,20 @@ body{
 
 }
 .image-section img{
+	max-width: 100%;
 	width:225px;
-	height: auto;
+	min-width: 100%
+	height: 230px;
+	margin-bottom: 10px;
 }
 .description{
 	text-align:center;
-	margin-top: 20px;
+	margin-top: 20px 10px 2px 10px;
+	padding-left:5px;
+	padding-right:5px;
 }
-
-.button-group .order{ /*the button*/
+/*the purchase  button*/
+.button-group .order{ 
 	background-color: #ffff;
 	font-size:14px;
 	padding:8px 8px;
@@ -106,5 +119,193 @@ body{
 .button-group .order:hover{
 	background-color: #ddd0c7;
 	transition: 0.6s ease;
+}
+.description_Set{
+	font-size: 12px;
+	padding:5px 10px 2px 10px;
+	text-align: justify;
+}
+/*input quantitiy*/
+.form-control:focus{
+	outline:none;
+	box-shadow: none;
+}
+
+.button-container .form-control{
+	max-width:70px;
+	text-align: center;
+	display: inline-block;
+}
+.form-control{
+	max-height:50px;
 
 }
+
+
+.button-group{/*purchase now*/
+	margin-top:30px;
+	min-width: 150px;
+	margin-bottom:20px;
+}
+
+@media screen and (max-width:356px) {
+  .smallSection h2{
+  	font-size: 30px;
+  }
+  .description h3{
+  	font-size: 20px;
+  }
+}
+.btn{
+	 border:1px solid black;
+}
+.btn:hover{
+	background-color: #ddd0c7;
+	transition: 0.3s ease;
+}
+.btn:focus{
+	outline:none;
+	box-shadow: none;
+}
+
+/*back to top button*/
+
+.go-up i{
+  	position: fixed;
+	top: 90%;
+	right: 0px;
+	text-align:right;
+	z-index:9999;
+	margin-top:-15px;
+	margin-right: 3%;
+	font-size: 150%;
+	color: black;
+	padding: 1%;
+	border-radius: 12px;
+	background-color: white;
+}
+
+.go-up i:hover{
+	color: white;
+	background-color: #808080;
+	font-size: 180%;
+}
+
+#navstick{
+	display: none;
+}
+
+
+/*------------------------------------------------*/
+		/* Below All Is Footer CSS */
+		.footer{
+		  background-color: #805D41;
+		  color: #fffdfa;
+		  font-size:15px;
+		  margin-bottom: 0px;
+		  overflow: hidden;		  
+		}
+
+
+		.footerBox {
+		  padding: 10px;
+		}
+
+		.footerTitle {
+		  font-size:20px;
+		}
+		.location {
+		  margin-top: 10px;
+		}
+		/* This is location CSS */
+		iframe{
+		  width:200px;
+		  height: 200px;
+		}
+
+		.emailBox {
+		  background-color:#ddd0c7;
+		  color: black;
+		  border-radius: 3px;
+		}
+
+		.emailTableBox {
+		  margin-top: 10px;
+		}
+
+		textarea {
+		  width: 300px;
+		  height: 100px;
+		}
+
+		.buttonClass {
+		  font-size: 20px !Important;
+		  padding: 3px 5px;
+		  margin-bottom: 3px;
+		}
+
+		.copyright {
+		  margin-left: 40%;
+		  font-size: small;
+		  padding-bottom: 10px;
+		}
+		label{
+			font-size:17px;
+		}
+
+		/*------------------------------------------------*/
+		/* Below All Is Media Responsive CSS */
+
+		/* For screen max until 945px */
+		@media only screen and (max-width: 945px)
+		{
+		  textarea {
+		    width:200px ;
+		    height: auto;
+		  }
+
+		  .buttonClass {
+		    font-size: 10px ;
+		  }
+		}
+
+		/* For screen max until 737px */
+		@media only screen and (max-width: 737px)
+		{
+		  .location {
+		    display:none;
+		  }
+
+
+		}
+
+		/* For screen max until 569px */
+		@media only screen and (max-width: 569px) {
+
+
+		  .footer{
+		    min-width: 400px;
+		  }
+
+		  .buttonClass {
+		    font-size: 15px !Important;
+		    padding: 10px 15px;
+		  }
+
+		  button {
+		    font-size: 20px;
+		    height: 40px;
+		  }
+
+		  .footerTitle {
+		    font-size: 25px;
+		  }
+
+		  .copyright {
+		    font-size: 20px;
+		    margin-bottom: 0px;
+		  }
+
+		  textarea{
+		    width: 170px;
+		  }

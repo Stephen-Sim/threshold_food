@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+table {
+  background-color: whitesmoke;
+  overflow-x: auto;
+}
+
+h5{
+  margin-bottom: 4px;
+  font-weight:lighter;
+}
+
+
+/*------------------------------------------------*/
+/* Below All Is Header CSS */
+
+.navbar-expand-lg{ /*outer layer*/
+  background-color: #807e7d; /*grey*/
+}
+.container-fluid{/* category name - to wrap the text in nav*/
+  font-weight: bold;
+  height: auto;
+  font-size: 20px;
+  padding-top:8px;
+  padding-bottom: 8px;
+  background-color: #ddd0c7; /*nerolac white chocolate*/
+}
+
+.logoHere {
+  height: 10%; 
+  width: 15%; 
+  margin-left: 40%;
+}
+
+/*------------------------------------------------*/
+/* Below All Is Footer CSS */
+footer{
+  background-color: #805D41;
+  color: #fffdfa;
+  font-size:15px;
+  
+}
+
+.footerBox {
+  padding: 10px;
+}
+
+.footerBox2 {
+  padding-left: 50px !Important;
+}
+
+.footerTitle {
+  font-size:20px;
+}
+
+.location {
+  margin-top: 10px;
+}
+
+/* This is location CSS */
+iframe{
+  width:200px;
+  height: 200px;
+  
+}
+
+.emailBox {
+  background-color:#ddd0c7;
+  color: black;
+  border-radius: 3px;
+}
+
+.emailTableBox {
+  margin-top: 10px;
+}
+
+textarea {
+  width: 200px;
+  height: 100px;
+  min-width: 150px;
+}
+
+.buttonClass {
+  padding: 3px 5px;
+  margin-bottom: 3px;
+}
+
+.copyright {
+  margin-left: 40%;
+  font-size: small;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+
+/*------------------------------------------------*/
+/* Below All Is Media Responsive CSS */
+
+/* For screen max until 945px */
+@media only screen and (max-width: 945px)
+{
+  textarea {
+    width:150px ;
+    height: auto;
+  }
+
+  .buttonClass {
+    font-size: 10px ;
+  }
+
+  .footerBox2 {
+    padding-left: 10px !important;
+  }
+}
+
+/* For screen max until 737px */
+@media only screen and (max-width: 737px)
+{
+  .location {
+        max-width: 200px;
+        height: auto;
+      }
+
+
+
+
+}
+
+/* For screen max until 569px */
+@media only screen and (max-width: 569px) {
+
+* {
+  font-size: 50px;
+
+}
+
+.GPSclass {
+      font-size: 60px;
+    }
+
+  footer{
+    min-width: 1300px;
+  }
+
+  .buttonClass {
+    font-size: 50px !Important;
+    padding: 10px 20px;
+  }
+
+  button {
+    font-size: 50px;
+  }
+
+  .footerTitle {
+    font-size: 60px;
+  }
+
+  .copyright {
+    font-size: 50px;
+  }
+
+  textarea{
+    min-width: 1000px;
+  }
+
+  .dataTableBox {
+    min-width: 1300px;
+  }
+
+.headerBox {
+  min-width: 1300px;
+}
+  .logoHere {
+  height: auto; 
+  min-width: 500px; 
+  margin-left: 0%;
+  } 
+
+  .container-fluid  {/* category name - to wrap the text in nav*/
+  font-weight: bold;
+  min-width: 1300px;
+  height: auto;
+  font-size: 20px;
+  padding-top:8px;
+  padding-bottom: 8px;
+  background-color: #ddd0c7; /*nerolac white chocolate*/
+  }
+
+.navbar-expand-lg{ /*outer layer*/
+  background-color: #807e7d; /*grey*/
+  min-width: 1300px;
+
+}
+.footerBox2 {
+    padding-left: 50px !important;
+  }
+}

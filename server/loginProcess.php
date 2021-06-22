@@ -43,11 +43,15 @@ if($_SERVER['REQUEST_METHOD'] === "POST")
 
 			if($rowCount > 0) // one basically
 			{
-				header("location: ../user/main.php");
+				$row = mysqli_fetch_array($result);
+				session_start();
+				$_SESSION['customer_id'] = $row['Customer_Id'];
+				$_SESSION['username'] = $row['Customer_Name'];
+				header("location: ./user/main.php");
 			}
 			else
 			{
-				$sql = "SELECT * FROM customer WHERE Customer_Name = '$username;'";
+				$sql = "SELECT * FROM customer WHERE Customer_Name = '$username' OR Customer_Email = '$username'";
 				$result = mysqli_query($conn, $sql);
 				$rowCount = mysqli_num_rows($result);
 

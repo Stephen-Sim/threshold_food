@@ -37,8 +37,17 @@
 				<div class="form_wrap">
 					<div class="input_group">
 						<div class="input_wrap">
+							<label>Name: </label>
+								<input class="form-control <?php echo isset($error['fullname']) ? 'is-invalid' : '';?>" type="text" name="fullname" value="<?php echo $customer_fname;?>">
+								<div class="invalid-feedback">
+									<?php echo $error['fullname'] ?? '';?>
+								</div>
+						</div>
+						
+						<div class="input_wrap">
 							<label>Username: </label>
 								<input class="form-control <?php echo isset($error['username']) ? 'is-invalid' : '';?>" type="text" name="username" value="<?php echo $customer_name;?>">
+								<small class="from-text text-muted">Min 6 and Max 12 Characters Without Space</small>
 								<div class="invalid-feedback">
 									<?php echo $error['username'] ?? '';?>
 								</div>
@@ -83,9 +92,9 @@
 	</div>
 
 <?php
-	if($customer_name && $customer_password && $customer_confirm && $customer_phone && $customer_email)
+	if($customer_fname && $customer_name && $customer_password && $customer_confirm && $customer_phone && $customer_email)
 	{
-		$sql = "INSERT INTO customer (Customer_Name, Customer_Password, Customer_Phone, Customer_Email) VALUES ('$customer_name', '$customer_password', $customer_phone, '$customer_email');";
+		$sql = "INSERT INTO customer (Customer_FullName, Customer_Name, Customer_Password, Customer_Phone, Customer_Email) VALUES ('$customer_fname','$customer_name', '$customer_password', $customer_phone, '$customer_email');";
 
 		$result = mysqli_query($conn, $sql);
 
