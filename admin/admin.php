@@ -198,11 +198,23 @@
   				width: 116%;
   			}
 		}
+		footer {
+	      background-color: #D0C6BA;
+	      text-align: center;
+	      font-family: Tahoma;
+	      float: bottom;
+	      bottom: 0;
+	      left: 0;
+	      right: 0;
+	      padding: 8px;
+	      color: black;
+	      font-size: 8px;
+	     }
 
 	</style>
 			
 </head>
-<body style="background-image: url();">
+<body style="background-image: url(); background-color: #ECE5DD;">
 	<?php if(isset($_SESSION['message'])):?>
 	<div class="alert alert-<?php echo $_SESSION['message_type']?>" role="alert">
 		<?php
@@ -290,5 +302,6 @@
 	</div>
 	<hr />
 
+	<footer><b>Copyright @Threshold Food</b></footer>
 </body>
 </html>

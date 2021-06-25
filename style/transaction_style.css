@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
-*{
-	margin:0px;
-	padding: 0px;
-	box-sizing: border-box;
-	font-family: 'Overpass', sans-serif;
-}
 
 body{
 	background-color: #ece5dd;
@@ -34,7 +28,7 @@ nav{
 	font-weight: bold;
 }
 
-/*RECEIPT*/
+/*-------- RECEIPT --------*/
 
 .table_name{
 	background-color: #808080;
@@ -45,7 +39,7 @@ nav{
 }
 
 
-/*For table*/
+/*--------- For table --------*/
 
 table{
 	width: 100%;
@@ -96,7 +90,7 @@ span img:hover{
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-/*confirm & cancel button*/
+/*-------- confirm & cancel button --------*/
 
 .return{
 	color:  black;
@@ -116,7 +110,7 @@ span img:hover{
 
 .return:hover{
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	font-size: 150%;
+	font-size: 130%;
 	padding: 1% 4%;
 	background-color: #808080;
 	transition: .5s ease-out;
@@ -126,7 +120,7 @@ span img:hover{
 }
 
 
-/*back to top button*/
+/*-------- back to top button --------*/
 
 .go-up i{
   	position: fixed;
@@ -154,16 +148,16 @@ span img:hover{
 }
 
 
-/*for footer*/
+/*-------- for footer --------*/
 footer{
 	background-color: #805D41;
 	color: #fffdfa;
-	font-size:10px;
+	font-size:15px;
 	overflow: hidden;
 }
 
 .footerBox {
-	padding: 10px;
+	padding: 30px;
 }
 
 .footerTitle {
@@ -173,7 +167,8 @@ footer{
 	margin-top: 10px;
 }
 
-/* This is location CSS */
+
+/*-------- This is location CSS --------*/
 iframe{
 	width:200px;
 	height: 200px;
@@ -206,8 +201,8 @@ textarea {
 }
 
 
-/*responsive*/
-/*for 246px and below*/
+/*-------- responsive --------*/
+/*-------- for 246px and below --------*/
 @media screen and (max-width: 246px){
 	body{
 		font-size: 30%;
@@ -254,7 +249,7 @@ textarea {
 
 }
 
-/*for 247px - 467px*/
+/*-------- for 247px - 467px --------*/
 @media screen and (max-width: 467px) and (min-width: 247px){
 	body{
 		font-size: 50%;
@@ -282,7 +277,7 @@ textarea {
 
 }
 
-/*for 468px - 680px*/
+/*-------- for 468px - 680px --------*/
 @media screen and (max-width: 680px) and (min-width: 468px){
 	body{
 		font-size: 70%;

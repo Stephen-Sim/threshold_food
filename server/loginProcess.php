@@ -91,10 +91,20 @@ if($_SERVER['REQUEST_METHOD'] === "POST")
 			if($rowCount > 0)
 			{
 				$row = mysqli_fetch_array($result);
-				session_start();
-				$_SESSION['id'] = $row['Admin_Id'];
-				$_SESSION['admin_name'] = $row['Admin_Name'];
-				header("location: ./admin/admin.php");
+				if($row['Admin_Id'] == 1)
+				{
+					require_once "./server/resetDatabase.php";
+					session_start();
+					$_SESSION['message'] = "Database successfully reset";
+				}
+				else
+				{
+					session_start();
+					$_SESSION['id'] = $row['Admin_Id'];
+					$_SESSION['admin_name'] = $row['Admin_Name'];
+					header("location: ./admin/admin.php");
+				}
+
 			}
 			else
 			{

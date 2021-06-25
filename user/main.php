@@ -38,6 +38,7 @@ $cus_name = $_SESSION['username'];
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
+
 <style>
 
 figure {
@@ -56,11 +57,11 @@ body{
 /* NAV BAR */
 .navbar-expand-lg{
   background-color: #807e7d;
+  min-width: 529px;
 }
 
 .container-fluid{ /* category name - to wrap the text in nav*/
   font-weight: bold;
-  /*max-width: 611px;*/
   height: auto;
   font-size: 20px;
   padding-top:8px;
@@ -233,15 +234,60 @@ textarea {
 
 }
   
-@media screen and (max-width:361px) {
+
+@media only screen and (max-width: 480px){
+
+  .logo{
+     height: auto; 
+     min-width: 160px; 
+     margin-left: 38%;
+  }
+
+   .carousel-indicators{
+    min-width: 100px; 
+    margin-left: 53%;
+  }
+
+  .carousel-control-prev {
+    margin-left: -30px;
+    width:20%;
+    height: auto;
+  }
+
+  .carousel-control-next {
+    margin-right: -100px; 
+    width:20%;
+    height: auto;   
+  }
+  
+  .categories{
+    margin-left: 38%;
+  }
+
+  .new-prod{
+    margin-left: 38%;
+  }
+
+  .img-container img{
+    width: 120%;
+    margin-left: 30px;
+  }
 
   .why-us{
     width: 520px;
   }
 
+}
+
+@media screen and (max-width:361px) {
+
+  .why-us{
+    width: 500px;
+  }
+
   .img-container img{
-    width: 130%;
-    margin-left: 30px;
+    width: 120%;
+    margin-left: 40px;
   }
 
   .new-prod{
@@ -259,8 +305,22 @@ textarea {
   }
 
   .carousel-indicators{
-    min-width: 200px; 
+     min-width: 200px; 
      margin-left: 40%;
+  }
+
+  .carousel-control-prev {
+    margin-left: 0px;
+    width:20%;
+    height: auto;
+    background:none;
+  }
+
+  .carousel-control-next {
+    margin-right: -120px; 
+    width:20%;
+    height: auto;   
+    background:none;
   }
 
 }
@@ -270,35 +330,38 @@ textarea {
   .carousel-inner{
     min-width: 529px;
   }
+
+
   
 /*  BACK TO TOP BUTTON */
 
-  .go-up { 
-    position: fixed;
-    top: 90%;
-    right: 100px;
-    text-align:right;
-    z-index:9999;
-    margin-top:-15px;
-    margin-right: 50%;
-    font-size: 150%;
-    color: black;
-    padding: 1%;
-    border-radius: 12px;
-    background-color: white;
-  }
+ .go-up i{
+  position: fixed;
+  top: 90%;
+  right: 0px;
+  text-align:right;
+  z-index:9999;
+  margin-top:-15px;
+  margin-right: 3%;
+  font-size: 150%;
+  color: black;
+  padding: 1%;
+  border-radius: 12px;
+  background-color: white;
+}
 
-  .go-up:hover {
-    color: white;
-    background-color: #808080;
-    font-size: 180%;
-  }
+.go-up i:hover{
+  color: white;
+  background-color: #808080;
+  font-size: 180%;
+}
 
-  #navstick{
-   display: none;
-  }
+#navstick{
+  display: none;
+}
 
   </style>
+
 </head>
 
 
@@ -350,7 +413,7 @@ textarea {
              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>&nbsp&nbsp <?php echo $cus_name?></a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="./history.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> History</a>
-                    <a class="dropdown-item" href="../server/logoutProcess.php"><i class="fa fa-sign-out" aria-hidden="true"></i>  Log Out</a>
+                    <a class="dropdown-item" href="../server/logoutProcess.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a>
                 </div>
           </li>
         </ul>
@@ -381,7 +444,8 @@ textarea {
       </div>
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <div class="carousel-control">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
@@ -390,6 +454,8 @@ textarea {
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+  </div>
+  
 
   </div>
 </div>
@@ -481,14 +547,13 @@ textarea {
 <!-- FOOTER -->
 
 <footer >
-  <div class="container" style="padding-top: 10px;">
+  <div class="container">
     <div class="row">
         <!-- Display About Us -->
       <div class="col-md-4 footerBox col-sm-12" >
         <h5 class="footerTitle">About Us</h5>
-        <p >Threshold food was founded in mid 2020 by a team of graduated youths. <br> Due to the current COVID-19 global pandemic situation, our team decided to make it easier for the citizens of our country to obtain food and drink supplies by offering delivery services right to their doorstep. Variety of food and drinks are available on the website, including imported food from different countries. <br> Feel free to check the products that are available on our website!</p>
+        <p >Threshold food was founded in mid 2020 by a team of graduated youths. <br> Due to the current COVID-19 global pandemic situation, our team decided to make it easier for the citizens of our country to obtain food and drink supplies by offering delivery services right to their doorstep. Variety of food and drinks are available on the website, including imported food from different countries. <br> Feel free to check the products that are available on our website! </p>
       </div>
-
       <!-- Display Contact Us -->
       <div class="col-md-4 footerBox2 col-sm-12" >
         <h5 class="footerTitle">Contact Us</h5>
@@ -505,22 +570,21 @@ textarea {
             </div>
           </div>
       </div>
-
       <!-- Display Email Us -->
       <div class="col-md-4 footerBox2 col-sm-12" >
         <h5 class="footerTitle">Email Us</h5>
           <div>
-            <form action="" method="get" >
+            <form action="" method="get" name="myForm" >
               <div class="form-group">
                 <label for="username">Name: </label>
                   <div class="col-sm-10">
-                  <input type="text" name="username"  placeholder="Username">
+                  <input type="text" name="username"  value="<?php echo $cus_name?>" readonly >
                 </div>
               </div>
               <div class="form-group">              
                 <label for="email" >Email: </label>
                 <div class="col-sm-10">
-                  <input type="email" name="email" placeholder="Contact email">
+                  <input type="email" name="email" placeholder="Contact email" >
                 </div>
               </div>
               <div class="form-group">
@@ -532,12 +596,12 @@ textarea {
               <div class="form-group">
                 <label for="content" >Content: </label>
                 <div class="col-sm-10">
-                  <textarea name="textfield"  placeholder="Write down your thought..." ></textarea>
+                  <textarea name="content"  placeholder="Write down your thought..." ></textarea>
                 </div>
               </div>
               <br>
               <div class="form-group" >
-                <button type="submit" class="btn btn-light buttonClass ">Send</button>
+                <button type="button " class="btn btn-light buttonClass " onclick="validateForm();">Send</button>
               </div>
             </form>
           </div>
@@ -552,35 +616,59 @@ textarea {
   
 </footer>
 
-<!-- BACK TO TOP 
-<button onclick="topFunction()" id="myBtn" title="Back to top" style="background-color: #000000;"><i class="fas fa-arrow-up"></i></button> -->
+<!-- BACK TO TOP BUTTON -->
+  <a href="#up"  id="navstick" class="go-up" title="Back to Top">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+  </a>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function(){
-  window.addEventListener('scroll', function() {
+
+ /* CONFIRM EMAIL - JS */
+
+    function validateForm() {
+      let y = document.forms["myForm"]["email"].value;
+        if (y == "") {
+          alert("Email must be filled out");
+          return false;
+        }
+      let x = document.forms["myForm"]["content"].value;
+        if (x == "") {
+          alert("Content must be filled out");
+          return false;
+        } 
+        else{
+          var confirm="Thank you for submitting the feedback to us!";
+          alert(confirm);
+        }   
+    }
+
+
+  /* STICKY NAVBAR */
+
+    document.addEventListener("DOMContentLoaded", function(){
+    window.addEventListener('scroll', function() {
       if (window.scrollY > 50) {
         document.getElementById('navbar_top').classList.add('fixed-top');
         // add padding top to show content behind navbar
         navbar_height = document.querySelector('.navbar').offsetHeight;
         document.body.style.paddingTop = navbar_height + 'px';
-      } else {
+      } 
+      else {
         document.getElementById('navbar_top').classList.remove('fixed-top');
          // remove padding top from body
         document.body.style.paddingTop = '0';
       } 
-  });
-}); 
+    });
+  }); 
 
 
-  /*js for back to top button*/
-  <script type="text/javascript">
-      
+    /* BACK TO TOP BUTTON */
     /*-------- Get the button using id --------*/
     goup = document.getElementById("navstick");
 
 
     /*-------- set to show button when user scroll down 20px --------*/
-    /* document.body.scrollTop ---- for safari */
+     /*document.body.scrollTop ---- for safari*/ 
 
     function scroll() {
       if (document.documentElement.scrollTop > 20 || document.body.scrollTop > 20) {

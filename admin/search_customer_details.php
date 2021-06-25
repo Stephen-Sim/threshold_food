@@ -59,7 +59,8 @@
 
       .search {
         display: flex;   
-        margin-top: 450px;     
+        margin-top: 410px; 
+        align-content: center;    
       }
 
       .searchTerm {
@@ -98,6 +99,10 @@
         transition:  0.4s;
       }
 
+       #title {
+          font-size: 21px;
+        }
+
       .wrap {
         position: absolute;
         top: 20%;
@@ -114,61 +119,80 @@
       }
 
       .dropbtn {
-      background-color: black;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
+        background-color: black;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
     }
 
     .dropdown {
-      position: relative;
-      bottom: 5px;
-      right: 20px;
-      display: inline-block;    
+        position: relative;
+        bottom: 5px;
+        right: 20px;
+        display: inline-block;    
     }
 
     .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
     }
 
     .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
     }
 
     .dropdown-content a:hover {
-      background-color: white;
+        background-color: white;
     }
 
     .dropdown:hover .dropdown-content {
-      display: block;
+        display: block;
     }
 
     .dropdown:hover .dropbtn {
-      background-color: grey;
+        background-color: grey;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .search{
+          margin-bottom: 110px;
+        }
+
+    }
+
+    @media only screen and (min-width: 700px) {
+        .search{
+          margin-bottom: 70px;
+        }
     }
 
     @media only screen and (max-width: 600px) {
-      .search{
-        margin-bottom: 150px;
-      }
-      #title {
-        font-size: 21px;
-      }
+        .search{
+          margin-bottom: 250px;
+        }
     }
 
-    @media only screen and (min-width: 600px) {
-      .search{
-        margin-bottom: 70px;
-      }
+    @media only screen and (max-width: 400px) {
+        .search{
+          margin-bottom: 300px;
+        }
+    }
+
+    @media only screen and (max-width: 486px) {
+        .dropbtn {
+          font-size: 8px;
+        }
+        #title{
+          font-size: 12px;
+        }
     }
     
   </style>
@@ -178,7 +202,7 @@
 
       <div style="padding: 2%; background-color:#807E7D;">
         <div style="height:45px;">
-          <b id="title" style="font-size:21px;">SEARCH CUSTOMER DETAILS</b>
+          <b id="title">SEARCH CUSTOMER DETAILS</b>
 
           <div class="dropdown" style="float: right;">
 

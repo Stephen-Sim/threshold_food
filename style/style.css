@@ -8,10 +8,12 @@
  	font-family: 'Overpass', sans-serif;
  }
 
- body{
- 	background-image: url('../image/backgroundPic.png');
- 	background-size: 1600px 800px;
- }
+ 
+ body {
+		  background: no-repeat center fixed;
+		  background-image: url('../image/backgroundPic.png');
+		  background-size: cover;
+		}
 
  #logoHere{
 	float:left;
@@ -25,10 +27,11 @@
 }
 
 .logoHere2{
-	width:150px;
+	width:300px;
 	min-height: 100px;
 	min-width: 100px;
 	padding-bottom: 20px;
+	
 }
 
 .Head{

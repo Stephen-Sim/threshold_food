@@ -13,11 +13,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Threshold | Login</title>
+
+	
 </head>
-<body>
+<body >
+
+	<?php if(isset($_SESSION['message'])):?>
+	<div class="alert alert-success" role="alert">
+		<?php
+			echo $_SESSION['message'] . "<br>";
+			session_destroy();
+		?>
+	</div>
+	<?php endif;?>
 
 	<!-- header part -->
-			<img src="./image/logo.png" style="height: 15%; width: 18%; margin-left: 40%;">
+			<center><img src="./image/logo.png" class="logoHere2"></center>
 
 
 	

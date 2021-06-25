@@ -1,8 +1,13 @@
 <?php 
+	error_reporting(0);
 	$dbHost = "localHost";
 	$dbUser = "root";
 	$dbPass = "";
 	$dbName = "threshold_food";
 
-	$conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName) or die("Database Connection Failed!");
+	if(($conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName)) == false)
+	{
+		require_once "./server/resetDatabase.php";
+	}
+
 ?>

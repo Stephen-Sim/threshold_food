@@ -8,11 +8,14 @@
 	<title>Threshold | Registration</title>
 	<!--css style-->
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
+
 	<!--bootstrap-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-	
+
+
 </head>
-<body style="background-color: #ece5dd">
+<body>
+	
 	<?php if(isset($_SESSION['message'])):?>
 	<div class="alert alert-success" role="alert">
 		<?php
@@ -103,6 +106,5 @@
 	}
 
 ?>
-
 </body>
 </html>

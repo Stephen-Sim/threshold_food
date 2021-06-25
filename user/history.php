@@ -46,6 +46,31 @@ require_once "./userLoginProcess.php";
 				} );
 
 		</script>
+
+		<!-- javascript to confirm email sent -->
+		<script type="text/javascript">
+
+			function validateForm() {
+				let y = document.forms["myForm"]["email"].value;
+			  if (y == "") {
+			    alert("Email must be filled out");
+			    return false;
+			  }
+				let x = document.forms["myForm"]["content"].value;
+			  if (x == "") {
+			    alert("Content must be filled out");
+			    return false;
+			  } 
+			  else{
+			  	var confirm="Thank you for submitting the feedback to us!";
+				alert(confirm);
+
+			  }
+			  
+			}
+		
+		</script>
+		<!-- CSS for hover -->
     <style type="text/css">
     	/*for user log out button  & cannot work on external file*/
 		.dropdown:hover .dropdown-menu{
@@ -191,17 +216,17 @@ require_once "./userLoginProcess.php";
 			<div class="col-md-4 footerBox2 col-sm-12" >
 				<h5 class="footerTitle">Email Us</h5>
 					<div>
-						<form action="" method="get" >
+						<form action="" method="get" name="myForm" >
 							<div class="form-group">
 								<label for="username">Name: </label>
 							    <div class="col-sm-10">
-									<input type="text" name="username"  placeholder="Username">
+									<input type="text" name="username"  value="<?php echo $cus_name?>" readonly >
 								</div>
 							</div>
 							<div class="form-group">							
 								<label for="email" >Email: </label>
 								<div class="col-sm-10">
-									<input type="email" name="email" placeholder="Contact email">
+									<input type="email" name="email" placeholder="Contact email" >
 								</div>
 							</div>
 							<div class="form-group">
@@ -213,12 +238,12 @@ require_once "./userLoginProcess.php";
 							<div class="form-group">
 								<label for="content" >Content: </label>
 								<div class="col-sm-10">
-									<textarea name="textfield"  placeholder="Write down your thought..." ></textarea>
+									<textarea name="content"  placeholder="Write down your thought..." ></textarea>
 								</div>
 							</div>
 							<br>
 							<div class="form-group" >
-								<button type="submit" class="btn btn-light buttonClass ">Send</button>
+								<button type="button " class="btn btn-light buttonClass " onclick="validateForm();">Send</button>
 							</div>
 						</form>
 					</div>

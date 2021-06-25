@@ -69,6 +69,39 @@ unset($output);
 			list-style: none;
 		}
 	</style>
+	<!-- Datatable JS -->
+		<script type="text/javascript">
+			  $(document).ready(function() {
+	   			 $('#example').DataTable();
+				} );
+			  $('#example').DataTable( {
+    				responsive: true
+				} );
+
+		</script>
+
+		<!-- javascript to confirm email sent -->
+		<script type="text/javascript">
+
+			function validateForm() {
+				let y = document.forms["myForm"]["email"].value;
+			  if (y == "") {
+			    alert("Email must be filled out");
+			    return false;
+			  }
+				let x = document.forms["myForm"]["content"].value;
+			  if (x == "") {
+			    alert("Content must be filled out");
+			    return false;
+			  } 
+			  else{
+			  	var confirm="Thank you for submitting the feedback to us!";
+				alert(confirm);
+
+			  }
+			  
+			}
+		</script>
 </head>
 
 
@@ -82,7 +115,7 @@ unset($output);
 	</header>
 		
 	<!--navigation bar-->
-	<nav class="navbar navbar-expand-lg navbar-light ">
+	<nav class="navbar navbar-expand-lg navbar-light sticky-top">
 		<div class="container-fluid" id="#navigate">
 			<!--active when resize-->
 		  	<a class="navbar-brand" href="category.php">Categories</a>
@@ -429,20 +462,18 @@ unset($output);
 	</div> <!--end of product display-->
 <br>
 
-<!-- Footer -->
 
-<div class="footer" >
+<!-- Footer -->
+<div class="footer">
 	<div class="container">
 		<div class="row">
 				<!-- Display About Us -->
 			<div class="col-md-4 footerBox col-sm-12" >
 				<h5 class="footerTitle">About Us</h5>
-				<p >Threshold food was founded in mid 2020 by a team of graduated youths.
-Due to the current COVID-19 global pandemic situation, our team decided to make it easier for the citizens of our country to obtain food and drink supplies by offering delivery services right to their doorstep. Variety of food and drinks are available on the website, including imported food from different countries.
-Feel free to check the products that are available on our website! </p>
+				<p >Threshold food was founded in mid 2020 by a team of graduated youths. <br> Due to the current COVID-19 global pandemic situation, our team decided to make it easier for the citizens of our country to obtain food and drink supplies by offering delivery services right to their doorstep. Variety of food and drinks are available on the website, including imported food from different countries. <br> Feel free to check the products that are available on our website! </p>
 			</div>
 			<!-- Display Contact Us -->
-			<div class="col-md-4 footerBox col-sm-12" >
+			<div class="col-md-4 footerBox2 col-sm-12" >
 				<h5 class="footerTitle">Contact Us</h5>
 				<span><i class="fas fa-phone"></i> : 011-22223344</span>
 				<br>
@@ -451,27 +482,27 @@ Feel free to check the products that are available on our website! </p>
 				<span><i class="fas fa-clock"></i> : 8am - 5pm</span>
 				<br>
 				<div  class="location">
-					<span style="font-size: 13px;">GPS: </span>
-					<div style="max-width: 200px;height: auto;padding-top: 5px;">
+					<span class="GPSclass">GPS: </span>
+					<div style="max-width: 200px;height: auto;">
 		        		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.182694460068!2d101.61919861379069!3d3.0456730546317554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4b2878066b2d%3A0x2e9226b3915214c1!2sThreshold%20of%20Success!5e0!3m2!1sen!2smy!4v1623465212345!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 		    		</div>
 	    		</div>
 			</div>
 			<!-- Display Email Us -->
-			<div class="col-md-4 footerBox col-sm-12" >
+			<div class="col-md-4 footerBox2 col-sm-12" >
 				<h5 class="footerTitle">Email Us</h5>
 					<div>
-						<form action="" method="get" >
+						<form action="" method="get" name="myForm" >
 							<div class="form-group">
 								<label for="username">Name: </label>
 							    <div class="col-sm-10">
-									<input type="text" name="username"  placeholder="Username">
+									<input type="text" name="username"  value="<?php echo $cus_name?>" readonly >
 								</div>
 							</div>
 							<div class="form-group">							
 								<label for="email" >Email: </label>
 								<div class="col-sm-10">
-									<input type="email" name="email" placeholder="Contact email">
+									<input type="email" name="email" placeholder="Contact email" >
 								</div>
 							</div>
 							<div class="form-group">
@@ -483,22 +514,25 @@ Feel free to check the products that are available on our website! </p>
 							<div class="form-group">
 								<label for="content" >Content: </label>
 								<div class="col-sm-10">
-									<textarea name="textfield"  placeholder="Write down your thought..." ></textarea>
+									<textarea name="content"  placeholder="Write down your thought..." ></textarea>
 								</div>
 							</div>
 							<br>
 							<div class="form-group" >
-								<button type="submit" class="btn btn-light buttonClass ">Send</button>
+								<button type="button " class="btn btn-light buttonClass " onclick="validateForm();">Send</button>
 							</div>
 						</form>
 					</div>
+			
 			</div>
 		</div>
 		
 	</div>
 	<br>
 	<hr>
-<p class="copyright" style="">@Copyright ThresholdFood</p>
+<p class="copyright" >@Copyright ThresholdFood</p>
+	</div> <!--footer-->
+
 	
 </div>
 </body>
