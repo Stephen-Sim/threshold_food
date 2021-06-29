@@ -3,6 +3,15 @@ require_once "../server/database.php";
 require_once "./tranProcess.php";
 require_once "./userLoginProcess.php";
 
+$category =
+[
+	"instant_noodles" => "Instant Noodle",
+	"snacks" => "Snack",
+	"drinks" => "Drink",
+	"instant_rice" => "Instant Rice",
+	"instant_hotpot" => "Instant Hotpot"
+];
+
 $output = '';
 $searchq='';
 // to settle SEARCH BAR problem
@@ -16,17 +25,15 @@ unset($output);
 
 			$query = mysqli_query($conn,"SELECT Product_Category FROM product WHERE Product_Name LIKE '%$searchq%'") or die ("Could not search");
 			$count = mysqli_num_rows($query);
-			if ($count ==0)
+			if ($count == 0)
 			{
 				$output = 'No results';
 			}
 			else 
 			{
-				while($row=mysqli_fetch_array($query))
-				{
-					$product = $row['Product_Category'];
-					$output = $searchq.' is in the category of '.$product;
-				}
+				$row=mysqli_fetch_array($query);
+				$product = array_search($row['Product_Category'], $category);
+				header("location: category.php#$product");				
 			}
 		}
 	}
@@ -475,12 +482,12 @@ unset($output);
 			<!-- Display Contact Us -->
 			<div class="col-md-4 footerBox2 col-sm-12" >
 				<h5 class="footerTitle">Contact Us</h5>
-				<span><i class="fas fa-phone"></i> : 011-22223344</span>
-				<br>
-				<span><i class="far fa-envelope"></i> : askadmin@thresholdfood.com</span>
-				<br>
-				<span><i class="fas fa-clock"></i> : 8am - 5pm</span>
-				<br>
+		        <span><i class="fa fa-phone" aria-hidden="true"></i> : 011-22223344</span>
+		        <br>
+		        <span><i class="fa fa-envelope-o" aria-hidden="true"></i> : askadmin@thresholdfood.com</span>
+		        <br>
+		        <span><i class="fa fa-clock-o"></i> : 8am - 5pm</span>
+		        <br>
 				<div  class="location">
 					<span class="GPSclass">GPS: </span>
 					<div style="max-width: 200px;height: auto;">

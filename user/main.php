@@ -557,11 +557,11 @@ textarea {
       <!-- Display Contact Us -->
       <div class="col-md-4 footerBox2 col-sm-12" >
         <h5 class="footerTitle">Contact Us</h5>
-        <span><i class="fas fa-phone"></i> : 011-22223344</span>
+        <span><i class="fa fa-phone" aria-hidden="true"></i> : 011-22223344</span>
         <br>
-        <span><i class="far fa-envelope"></i> : askadmin@thresholdfood.com</span>
+        <span><i class="fa fa-envelope-o" aria-hidden="true"></i> : askadmin@thresholdfood.com</span>
         <br>
-        <span><i class="fas fa-clock"></i> : 8am - 5pm</span>
+        <span><i class="fa fa-clock-o"></i> : 8am - 5pm</span>
         <br>
         <div  class="location">
           <span class="GPSclass">GPS: </span>
