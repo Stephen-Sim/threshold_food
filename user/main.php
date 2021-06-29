@@ -471,14 +471,14 @@ textarea {
 
 <div class="wrapper">
   <div class="top-row">
-    <figure style="margin: 0; padding: 15px;"><a target="_blank" href="./category.php#instant_hotpot"><img src="../image/3.png" height="auto" width="500"></a></figure>
-    <figure style="margin:0"><a target="_blank" href="./category.php#instant_rice"><img src="../image/1.png" height="auto" width="500"></a></figure>
+    <figure style="margin: 0; padding: 15px;"><a href="./category.php#instant_hotpot"><img src="../image/3.png" height="auto" width="500"></a></figure>
+    <figure style="margin:0"><a href="./category.php#instant_rice"><img src="../image/1.png" height="auto" width="500"></a></figure>
   </div>
 
   <div class="second-row">
-    <figure style="margin: 0; padding: 15px;"><a target="_blank" href="./category.php#snacks"><img src="../image/4.png" height="auto" width="500"></a></figure>
-    <figure style="margin:0 padding: 15px;"><a target="_blank" href="./category.php#instant_noodles"><img src="../image/2.png" height="auto" width="500"></a></figure>
-    <figure style="margin: 0; padding: 15px;"> <a target="_blank" href="./category.php#drinks"><img src="../image/5.png" height="auto" width="500"></a></figure>
+    <figure style="margin: 0; padding: 15px;"><a href="./category.php#snacks"><img src="../image/4.png" height="auto" width="500"></a></figure>
+    <figure style="margin:0 padding: 15px;"><a href="./category.php#instant_noodles"><img src="../image/2.png" height="auto" width="500"></a></figure>
+    <figure style="margin: 0; padding: 15px;"> <a href="./category.php#drinks"><img src="../image/5.png" height="auto" width="500"></a></figure>
   </div>
 </div>
 
@@ -617,7 +617,7 @@ textarea {
 </footer>
 
 <!-- BACK TO TOP BUTTON -->
-  <a href="#up"  id="navstick" class="go-up" title="Back to Top">
+  <a href="#"  id="navstick" class="go-up" title="Back to Top">
     <i class="fa fa-angle-double-up" aria-hidden="true"></i>
   </a>
 
